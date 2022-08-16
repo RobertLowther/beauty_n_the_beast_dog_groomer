@@ -1,0 +1,95 @@
+{% extends 'main/base.html' %}
+
+{% load photo_tags %}
+{% load static %}
+
+{% block body %}
+    <div style="text-align: center;">
+        <br>
+        <div class="container" style="display: flex;">
+            <div class="row" style="padding: 50px 0px;">
+                <div class="col s12 m6">
+                    <div class="card indigo darken-2" style="background-color:inherit;">
+                        <div class="card-content black-text text-lighten-3">
+                            <span class="card-title" style="color: white"><strong><h3>Your local pet groomer!</h3></strong></span>
+                            <p style="font-size: x-large; color: white">Beauty N the Beast is the best groomer around, and we are excited to welcome you and your dog.
+                                We have experience grooming all kinds of dogs and we love to make new doggie friends. Your
+                                dog will feel right at home here with us!
+                            </p>
+                            <hr style="width: 60%; margin: 25px auto;">
+                            <p class="left" style="color: white"><strong>Ashly S.</strong></p><br>
+                            <blockquote style="color: white">
+                                The groomers here really love the dogs they pamper, and pamper they do.  Murphy was treated like a queen.  The priceless are reasonable and the customer service is EXCELLENT!
+                            </blockquote>
+                            <p style="color: white">-- 5 star yelp review --</p>
+                        </div>
+                    </div>
+                </div>
+                <img class="col s12 m6" src="{% static 'main/pexels-dog-shampoo.jpg' %}" style="width: 35%; border-radius: 100%; position: relative; top: 50%; transform: translateY(-50%);">
+            </div>
+        </div>
+    </div>
+    <div class="grey darken-3 z-depth-2" style="text-align: center;">
+        <div class="container" style="display: flex;">
+            <div class="row" style="padding: 50px 0px;">
+                <img class="col s12 m6" src="{% static 'main/pexels-dog-bubbles.jpg' %}" style="width: 35%; border-radius: 100%; position: relative; top: 50%; transform: translateY(-50%);">
+                <div class="col s12 m6">
+                    <div class="card indigo darken-2" style="background-color:inherit;">
+                        <div class="card-content black-text text-lighten-3">
+                            <span class="card-title white-text">Pamper Your Best Friend!</span>
+                            <p class="white-text" style="font-size: x-large;">We offer spa soaks with Epsom salts and essential oils to relieve allergies and joint pain.
+                                All dogs are soaked this way to relax before their haircuts. Each dogs ears are cleaned with a natural ear cleanser.
+                                Then they get to enjoy a blueberry facial. We also offer hot oil treatments for our friends who may be suffering from dry skin and dandruff.
+                                They are fluffed with warm air and gently brushed out by hand, rather than a cage dryer. We use high end products to ensure quality grooms and safety of your pups!
+                                We spend our time talking with clients before the groom to help you decide on a unique style catered to your special furry friend.
+                            </p>
+                            <hr style="width: 60%; margin: 25px auto;">
+                            <p class="left white-text"><strong>Spothors P.</strong></p><br>
+                            <blockquote class="white-text">
+                                Love this place and so does my dog. They are gentle, caring and very patient with my puppy who hadn't been groomed before. Love the essential oil baths. Won't take my dog anywhere else.
+                            </blockquote>
+                            <p class="white-text">-- 5 star yelp review --</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <div class="container" style="display: flex;">
+            <div class="row" style="padding: 50px 0px;">
+                <div class="col s12 m6">
+                    <div class="card center indigo darken-2" style="background-color:inherit;">
+                        <div class="card-content black-text text-lighten-3">
+                            <span class="card-title white-text"><h2>Schedule an appointment today!</h2></span>
+                            <hr style="width: 60%; margin: 25px auto;">
+                            <p class="white-text" style="font-size: x-large;"><u>Call us at:</u></p>
+                            <p class="white-text" style="font-size: x-large;">(712) 308-1323</p>
+                            <br>
+                            <p class="white-text" style="font-size: x-large;"><u>or visit us at:</u></p>
+                            <p class="white-text" style="font-size: x-large;">Beauty N The Beast LLC</p>
+                            <p class="white-text" style="font-size: x-large;">614 Market St</p>
+                            <p class="white-text" style="font-size: x-large;">Harlan, IA 51537-1412</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card center indigo darken-2" style="background-color:inherit;">
+                        <div class="card-content black-text text-lighten-3">
+                            <span class="card-title white-text"><h2>Hours</h2></span>
+                            <hr style="width: 60%; margin: 25px auto;">
+                            <span class="card-title white-text">Hours</span>
+                            <p class="white-text">Mon-9:00 AM - 3:00 PM</p>
+                            <p class="white-text">Tue-9:00 AM - 3:00 PM</p>
+                            <p class="white-text">Wed-9:00 AM - 3:00 PM</p>
+                            <p class="white-text">Thu-9:00 AM - 3:00 PM</p>
+                            <p class="white-text">Fri-9:00 AM - 3:00 PM</p>
+                            <p class="white-text">Sat-Closed</p>
+                            <p class="white-text">Sun-Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

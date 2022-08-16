@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %}
+
+{% load photo_tags %}
+
+{% block body %}
+    <div class='container grey darken-1' style="background-color: white;">
+        <br>
+        <h2 class="center grey darken-1">Meet some of our friends!</h2>
+        <br><br>
+        {% if images %}
+            <div class="row">
+                {% for image in images %}
+                    {% with image|split:'.' as strs %}
+                        {% with strs|length as str_arr_len %}
+                            {% with str_arr_len|add:'-1' as ext_idx %}
+                                {% if strs|get_by_index:ext_idx == 'jpg' %}
+                                    <div class="col s12 m6 l4 grey darken-1">
+                                        <div class="card indigo darken-1" style="height: 600px; display: flex; flex-direction: column; text-align: center;">
+                                            <a href="../media/gallery/{{ image }}">
+                                                <div class="card-image" style=" position: absolute; top: 50%; transform: translateY(-50%);">
+                                                    <img src="../media/gallery/{{ image }}" style="object-fit: scale-down; max-height:600px; padding: 10px;">                                                    
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endwith %}
+                        {% endwith %}
+                    {% endwith %}
+                    {% if forloop.counter|divisibleby:4 %}
+                        <div class="clear"></div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No image available.</p>
+        {% endif %}
+    </div>
+{% endblock body %}
